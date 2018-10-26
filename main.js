@@ -1,4 +1,6 @@
 var Modal = (function(){
+  'use strict';
+
   // create elems
   var modal_elem = document.createElement('div'),
       modal_wrapper = document.createElement('div'),
@@ -25,6 +27,7 @@ var Modal = (function(){
   return {
     init: function(obj) {
       // create child element... and insert to body
+      var new_elem;
       if (arguments.length == 1) {
         if (obj.text) {
           new_elem = document.createTextNode(obj.text);
